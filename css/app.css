@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;400;700;800&family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap');
+
+:root{
+    --bg-color: #F3F5FC;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: 'Inter', 'Open Sans';
+}
+
+body{
+    background-color: var(--bg-color);
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.container{
+
+    margin-top: 5vh;
+
+    display: flex;
+    justify-content: center;
+
+    height: 95vh;
+}
+
+
+.left_side{
+    width: 70%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.right_side{
+    width: 25%;
+}
+
+/* HEADER */
+header{
+    align-self: flex-start;
+}
+
+.header__logo-container picture object{
+    width: 15rem;
+}
+
+
+/* MAIN */
+.ingresar, .selector{
+}
+
+main {
+    width: 80%;
+    height: 90%;
+    padding: 2rem 0 0 3rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+/* INGRESAR TEXTO */
+
+.ingresar{
+    height: 20rem;
+}
+
+.ingresar__input{
+    width: 100%;
+
+    font-size: 2.8rem;
+    color: #0A3871;
+    font-weight: normal;
+
+
+    border: none;
+    background-color: var(--bg-color);
+}
+
+.ingresar__input::placeholder{
+    color: #0A3871;
+}
+
+.ingresar__input:focus{
+    outline: none;
+}
+
+
+/* SELECCIONAR ENCRIPTAR O DESENCRIPTAR */
+
+.selector{
+    margin-top: 8rem;
+}
+
+.selector__aviso-info{
+    color: #495057;
+    font-size: 1.4rem;
+}
+
+.selector__aviso-info .info_icon{
+    font-size: 1.6rem;
+}
+
+.selector__button-container{
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    gap: 2rem;
+}
+
+.selector__button-encriptar,
+.selector__button-desencriptar
+{
+    font-size: 2rem;
+    width: 30%;
+    max-width: 100%;
+    color: white;
+    padding: 1.5rem 0;
+
+    border: none;
+    border-radius: 1rem;
+}
+
+.selector__button-encriptar:hover{
+    background-color: #D8DFE8;
+    color: #0A3871;
+    cursor: pointer;
+}
+
+.selector__button-desencriptar:hover{
+    background-color: #0A3871;
+    color: #D8DFE8;
+    cursor: pointer;
+}
+
+.selector__button-desencriptar:hover,
+.selector__button-encriptar:hover{
+    transition: all ease 0.3s;
+}
+
+.selector__button-encriptar{
+    background-color: #0A3871;
+}
+
+.selector__button-desencriptar{
+    background-color:#D8DFE8;
+    color: #0A3871;
+    border: solid #174278 0.01rem;
+}
+
+/* SECCION DE MENSAJES */
+
+.mensajes {
+    height: 95%;
+    padding: 0 1rem;
+
+    background-color: white;
+
+    border-radius: 10px;
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1); 
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.mensajes__muneco {
+    width: 70%;
+}
+
+.mensajes__info{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mensajes__info-titulo{
+    font-size: 3rem;
+    width: 70%;
+}
+
+.mensajes__info-contenido{
+    color: #777C81;
+    font-size: 2rem;
+    width: 80%;
+}
+
+/* RESPONSIVE */
+
+
+
+@media (max-width: 1536px) {
+    .right_side{
+        width: 40%;
+    }
+    .left_side{
+        width: 50%;
+    }
+
+}
+
+@media (max-width: 1280px) {
+
+    .selector__button-encriptar,
+    .selector__button-desencriptar{
+        width: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .container{
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    .left_side{
+        width: 90%;
+        margin-bottom: 2rem;
+    }
+
+    header{
+        align-self: center;
+
+    }
+
+    main{
+        width: 100%;
+        padding: 0;
+        justify-content: center;
+        text-align: center;
+    }
+
+
+    .ingresar__input{
+        text-align: center;
+        margin-top: 4rem;
+        width: 60%;
+    }
+
+    .right_side{
+        width: 90%;
+
+    }
+
+    .mensajes{
+        padding: 4rem 0;
+    }
+}

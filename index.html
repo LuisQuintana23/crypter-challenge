@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Normalize -->
+    <link rel="preload" href="css/normalize.css" as="style">
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- Hoja de estilos -->
+    <link rel="preload" href="css/app.css" as="style">
+    <link rel="stylesheet" href="css/app.css">
+    <title>Encriptador</title>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="left_side">
+        <header>
+            <div class="header__logo-container">
+                <picture>
+                    <object data="img/logo.svg" type=""></object>
+                </picture>
+            </div>
+        </header>
+
+        <main>
+            <section class="ingresar">
+                <form class="ingresar__form" action="">
+                    <textarea class="ingresar__input" rows="10" placeholder="Ingrese el texto aqui" autofocus required wrap="soft">
+
+                    </textarea>
+                </form>
+            </section>
+
+            <section class="selector">
+                <div class="selector__aviso">
+                    <p class="selector__aviso-info">
+                        <span class="info_icon">&#128712</span> Solo letras minúsculas y sin acentos
+                    </p>
+                </div>
+                <div class="selector__button-container">
+                    <button class="selector__button-encriptar">
+                        Encriptar
+                    </button>
+                    <button class="selector__button-desencriptar">
+                        Desencriptar
+                    </button>
+                </div>
+            </section>
+        </main>    
+    </div>
+
+    <div class="right_side">
+        <aside class="mensajes">
+            <object class="mensajes__muneco" data="img/muneco.svg" type=""></object>
+            <div class="mensajes__info">
+                <h3 class="mensajes__info-titulo">
+                    Ningún mensaje fue encontrado
+                </h3>
+                <p class="mensajes__info-contenido">
+                    Ingresa el texto que desees encriptar o desencriptar.
+                </p>
+            </div>
+        </aside>
+    </div>
+
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
