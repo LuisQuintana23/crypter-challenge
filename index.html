@@ -28,7 +28,7 @@
         <main>
             <section class="ingresar">
                 <form class="ingresar__form" action="">
-                    <textarea class="ingresar__input" rows="10" placeholder="Ingrese el texto aqui" autofocus required wrap="soft">
+                    <textarea class="ingresar__input" id="input_text" rows="10" placeholder="Ingrese el texto aqui" autofocus required wrap="soft">
 
                     </textarea>
                 </form>
@@ -41,10 +41,10 @@
                     </p>
                 </div>
                 <div class="selector__button-container">
-                    <button class="selector__button-encriptar">
+                    <button onclick="encriptar()" class="selector__button-encriptar">
                         Encriptar
                     </button>
-                    <button class="selector__button-desencriptar">
+                    <button onclick="desencriptar()" class="selector__button-desencriptar">
                         Desencriptar
                     </button>
                 </div>
@@ -53,7 +53,7 @@
     </div>
 
     <div class="right_side">
-        <aside class="mensajes">
+        <aside class="mensajes" id="ningun_mensaje">
             <object class="mensajes__muneco" data="img/muneco.svg" type=""></object>
             <div class="mensajes__info">
                 <h3 class="mensajes__info-titulo">
@@ -63,6 +63,17 @@
                     Ingresa el texto que desees encriptar o desencriptar.
                 </p>
             </div>
+        </aside>
+
+        <aside class="mensajes" id="decifrado_mensaje">
+            <div class="mensajes__info">
+                <p id="mensaje_cifrado" class="mensajes__info-contenido">
+
+                </p>
+            </div>
+            <button onclick="copiar()" id="btn_copiar" class="selector__button-desencriptar">
+                Copiar
+            </button>
         </aside>
     </div>
 
